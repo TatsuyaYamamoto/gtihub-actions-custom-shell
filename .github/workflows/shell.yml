@@ -7,6 +7,8 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - name: Display the path
         shell: bash
         run: echo $PATH
@@ -24,3 +26,9 @@ jobs:
         shell: node {0}
         run: |
           console.log(process.env);
+
+      - name: Run zx
+        shell: npx zx {0}
+        run: |
+          const branch = await $`git branch --show-current`
+          echo`Current branch is ${branch}.`
