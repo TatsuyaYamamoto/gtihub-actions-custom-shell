@@ -1,0 +1,12 @@
+name: "custom shell"
+
+on:
+  workflow_dispatch
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display the path
+        shell: bash
+        run: echo $PATH
