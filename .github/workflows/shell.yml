@@ -10,3 +10,9 @@ jobs:
       - name: Display the path
         shell: bash
         run: echo $PATH
+
+      # https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#custom-shell
+      - name: Display the environment variables and their values
+        shell: perl {0}
+        run: |
+          print %ENV
