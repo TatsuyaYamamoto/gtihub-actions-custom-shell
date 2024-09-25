@@ -16,3 +16,11 @@ jobs:
         shell: perl {0}
         run: |
           print %ENV
+
+      - name: default install Node.js version
+        run: node --version
+
+      - name: Run with Node.js
+        shell: node {0}
+        run: |
+          console.log(process.env);
