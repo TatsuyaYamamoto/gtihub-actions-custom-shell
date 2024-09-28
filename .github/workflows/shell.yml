@@ -34,7 +34,7 @@ jobs:
           console.log(process.env);
 
       - name: Run zx
-        shell: npx zx {0}
+        shell: npx zx@8.1.8 {0}
         run: |
           const branch = await $`git branch --show-current`
           echo`Current branch is ${branch}.`
