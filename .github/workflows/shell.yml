@@ -9,9 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Display the path
+      - name: Display executed script file name
         shell: bash
-        run: echo $PATH
+        run: echo "$0"
 
       # https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#custom-shell
       - name: Display the environment variables and their values
